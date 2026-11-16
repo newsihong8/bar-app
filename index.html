@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>바르 체험단</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="바르 체험단">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="theme-color" content="#1c201e">
+<meta name="robots" content="noindex, nofollow">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+  html, body { margin:0; height:100%; background:#1c201e; overflow:hidden; }
+  body { padding-top:env(safe-area-inset-top); padding-bottom:env(safe-area-inset-bottom); box-sizing:border-box; }
+  iframe { display:block; width:100%; height:100%; border:0; background:#1c201e; }
+  #fb { position:fixed; left:0; right:0; bottom:calc(16px + env(safe-area-inset-bottom)); text-align:center; font:14px -apple-system, sans-serif; display:none; }
+  #fb a { color:#78c894; }
+</style>
+</head>
+<body>
+<iframe id="f" title="바르 체험단" allow="clipboard-write"
+  src="https://script.google.com/macros/s/AKfycbwct0pI6MKuWUVElcooW2ZHFNscAUNzo7BURgEAGv5H_69KPqiKqfnoHc3J2-g7aPCjxw/exec"></iframe>
+<div id="fb">화면이 안 뜨면 <a href="https://script.google.com/macros/s/AKfycbwct0pI6MKuWUVElcooW2ZHFNscAUNzo7BURgEAGv5H_69KPqiKqfnoHc3J2-g7aPCjxw/exec" target="_blank" rel="noopener">여기를 눌러 바로 열기</a></div>
+<script>
+  var ok = false;
+  document.getElementById('f').addEventListener('load', function(){ ok = true; });
+  setTimeout(function(){ if (!ok) document.getElementById('fb').style.display = 'block'; }, 15000);
+</script>
+</body>
+</html>
