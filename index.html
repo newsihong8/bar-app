@@ -27,7 +27,7 @@
 <div id="fb">화면이 안 뜨면 <a href="https://script.google.com/macros/s/AKfycbwct0pI6MKuWUVElcooW2ZHFNscAUNzo7BURgEAGv5H_69KPqiKqfnoHc3J2-g7aPCjxw/exec" target="_blank" rel="noopener">여기를 눌러 바로 열기</a></div>
 <script>
   var ok = false;
-  document.getElementById('f').addEventListener('load', function(){ ok = true; });
+  document.getElementById('f').addEventListener('load', function(){ ok = true; document.getElementById('fb').style.display = 'none'; });
   setTimeout(function(){ if (!ok) document.getElementById('fb').style.display = 'block'; }, 15000);
 </script>
 </body>
