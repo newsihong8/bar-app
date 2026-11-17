@@ -10,6 +10,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="theme-color" content="#1c201e">
 <meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Cache-Control" content="no-cache">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="manifest" href="manifest.webmanifest">
@@ -22,10 +23,11 @@
 </style>
 </head>
 <body>
-<iframe id="f" title="바르 체험단" allow="clipboard-write"
-  src="https://script.google.com/macros/s/AKfycbwct0pI6MKuWUVElcooW2ZHFNscAUNzo7BURgEAGv5H_69KPqiKqfnoHc3J2-g7aPCjxw/exec"></iframe>
+<iframe id="f" title="바르 체험단" allow="clipboard-write" scrolling="yes"></iframe>
 <div id="fb">화면이 안 뜨면 <a href="https://script.google.com/macros/s/AKfycbwct0pI6MKuWUVElcooW2ZHFNscAUNzo7BURgEAGv5H_69KPqiKqfnoHc3J2-g7aPCjxw/exec" target="_blank" rel="noopener">여기를 눌러 바로 열기</a></div>
 <script>
+  // 열 때마다 최신 화면을 불러오도록 주소 끝에 시각을 붙임 (예전 화면 기억 방지)
+  document.getElementById('f').src = 'https://script.google.com/macros/s/AKfycbwct0pI6MKuWUVElcooW2ZHFNscAUNzo7BURgEAGv5H_69KPqiKqfnoHc3J2-g7aPCjxw/exec?v=' + Date.now();
   var ok = false;
   document.getElementById('f').addEventListener('load', function(){ ok = true; document.getElementById('fb').style.display = 'none'; });
   setTimeout(function(){ if (!ok) document.getElementById('fb').style.display = 'block'; }, 15000);
