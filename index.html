@@ -26,8 +26,8 @@
 <iframe id="f" title="바르 체험단" allow="clipboard-write" scrolling="yes"></iframe>
 <div id="fb">화면이 안 뜨면 <a href="https://script.google.com/macros/s/AKfycbwct0pI6MKuWUVElcooW2ZHFNscAUNzo7BURgEAGv5H_69KPqiKqfnoHc3J2-g7aPCjxw/exec" target="_blank" rel="noopener">여기를 눌러 바로 열기</a></div>
 <script>
-  // 열 때마다 최신 화면을 불러오도록 주소 끝에 시각을 붙임 (예전 화면 기억 방지)
-  document.getElementById('f').src = 'https://script.google.com/macros/s/AKfycbwct0pI6MKuWUVElcooW2ZHFNscAUNzo7BURgEAGv5H_69KPqiKqfnoHc3J2-g7aPCjxw/exec?v=' + Date.now();
+  // 주소는 고정 (주소가 바뀌면 저장된 접속 번호가 사라짐)
+  document.getElementById('f').src = 'https://script.google.com/macros/s/AKfycbwct0pI6MKuWUVElcooW2ZHFNscAUNzo7BURgEAGv5H_69KPqiKqfnoHc3J2-g7aPCjxw/exec';
   var ok = false;
   document.getElementById('f').addEventListener('load', function(){ ok = true; document.getElementById('fb').style.display = 'none'; });
   setTimeout(function(){ if (!ok) document.getElementById('fb').style.display = 'block'; }, 15000);
