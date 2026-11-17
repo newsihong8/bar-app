@@ -21,8 +21,10 @@
 <iframe id="f" title="체험단 방문 일정 예약" scrolling="yes"></iframe>
 <div id="fb">화면이 안 뜨면 <a id="fl" href="#" target="_blank" rel="noopener">여기를 눌러 바로 열기</a></div>
 <script>
-  var t = (new URLSearchParams(location.search).get('t') || '').replace(/[^A-Za-z0-9_\-.]/g, '');
-  var url = 'https://script.google.com/macros/s/AKfycbwct0pI6MKuWUVElcooW2ZHFNscAUNzo7BURgEAGv5H_69KPqiKqfnoHc3J2-g7aPCjxw/exec?book=' + encodeURIComponent(t);
+  var q = new URLSearchParams(location.search);
+  var t = (q.get('t') || '').replace(/[^A-Za-z0-9_\-.]/g, '') || 'apply';
+  var c = (q.get('c') || '').slice(0, 60);
+  var url = 'https://script.google.com/macros/s/AKfycbwct0pI6MKuWUVElcooW2ZHFNscAUNzo7BURgEAGv5H_69KPqiKqfnoHc3J2-g7aPCjxw/exec?book=' + encodeURIComponent(t) + (c ? '&c=' + encodeURIComponent(c) : '');
   document.getElementById('fl').href = url;
   document.getElementById('f').src = url;
   var ok = false;
