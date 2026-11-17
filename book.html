@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>체험단 방문 일정 예약 · 바르마케팅</title>
+<meta property="og:title" content="체험단 방문 일정 예약">
+<meta property="og:description" content="바르마케팅 · 방문 가능한 날짜와 시간을 직접 골라 주세요">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#24324a">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+  html, body { margin:0; height:100%; background:#f6f4ef; overflow:hidden; }
+  body { padding-top:env(safe-area-inset-top); box-sizing:border-box; }
+  iframe { display:block; width:100%; height:100%; border:0; background:#f6f4ef; }
+  #fb { position:fixed; left:0; right:0; top:45%; text-align:center; font:15px -apple-system, sans-serif; color:#5b6673; display:none; padding:0 16px; }
+  #fb a { color:#24324a; font-weight:700; }
+</style>
+</head>
+<body>
+<iframe id="f" title="체험단 방문 일정 예약" scrolling="yes"></iframe>
+<div id="fb">화면이 안 뜨면 <a id="fl" href="#" target="_blank" rel="noopener">여기를 눌러 바로 열기</a></div>
+<script>
+  var t = (new URLSearchParams(location.search).get('t') || '').replace(/[^A-Za-z0-9_\-.]/g, '');
+  var url = 'https://script.google.com/macros/s/AKfycbwct0pI6MKuWUVElcooW2ZHFNscAUNzo7BURgEAGv5H_69KPqiKqfnoHc3J2-g7aPCjxw/exec?book=' + encodeURIComponent(t);
+  document.getElementById('fl').href = url;
+  document.getElementById('f').src = url;
+  var ok = false;
+  document.getElementById('f').addEventListener('load', function(){ ok = true; document.getElementById('fb').style.display = 'none'; });
+  setTimeout(function(){ if (!ok) document.getElementById('fb').style.display = 'block'; }, 15000);
+</script>
+</body>
+</html>
