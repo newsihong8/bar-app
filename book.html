@@ -24,7 +24,7 @@
   var q = new URLSearchParams(location.search);
   var t = (q.get('t') || '').replace(/[^A-Za-z0-9_\-.]/g, '') || 'apply';
   var c = (q.get('c') || '').slice(0, 60);
-  var url = 'https://script.google.com/macros/s/AKfycbwct0pI6MKuWUVElcooW2ZHFNscAUNzo7BURgEAGv5H_69KPqiKqfnoHc3J2-g7aPCjxw/exec?book=' + encodeURIComponent(t) + (c ? '&c=' + encodeURIComponent(c) : '');
+  var url = 'https://script.google.com/macros/s/AKfycbwct0pI6MKuWUVElcooW2ZHFNscAUNzo7BURgEAGv5H_69KPqiKqfnoHc3J2-g7aPCjxw/exec?book=' + encodeURIComponent(t) + (c ? '&shop=' + encodeURIComponent(c) : '');
   document.getElementById('fl').href = url;
   document.getElementById('f').src = url;
   var ok = false;
