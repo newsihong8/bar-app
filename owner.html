@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>바르 사장님앱</title>
+<title>바르마케팅 광고관리앱</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="사장님앱">
+<meta name="apple-mobile-web-app-title" content="바르마케팅 광고관리앱">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="theme-color" content="#111315">
 <meta name="robots" content="noindex, nofollow">
@@ -21,14 +21,14 @@
 </style>
 </head>
 <body>
-<iframe id="f" title="바르 사장님앱" allow="clipboard-write" scrolling="yes"></iframe>
+<iframe id="f" title="바르마케팅 광고관리앱" allow="clipboard-write" scrolling="yes"></iframe>
 <div id="fb">화면이 안 뜨면 <a id="fl" href="#" target="_blank" rel="noopener">여기를 눌러 바로 열기</a></div>
 <script>
   // 주소 고정: ?t=업체 링크 번호만 받음 (다른 값을 붙이면 로그인이 풀릴 수 있음)
   var t = (new URLSearchParams(location.search).get('t') || '').replace(/[^A-Za-z0-9]/g, '').slice(0, 60);
   var url = 'https://script.google.com/macros/s/AKfycbwct0pI6MKuWUVElcooW2ZHFNscAUNzo7BURgEAGv5H_69KPqiKqfnoHc3J2-g7aPCjxw/exec?owner=' + t;
   document.getElementById('fl').href = url;
-  if (t) document.getElementById('f').src = url; else document.getElementById('fb').innerHTML = '바르마케팅에서 받은 사장님앱 링크로 들어와 주세요.';
+  if (t) document.getElementById('f').src = url; else document.getElementById('fb').innerHTML = '바르마케팅에서 받은 광고관리앱 링크로 들어와 주세요.';
   var ok = false;
   document.getElementById('f').addEventListener('load', function(){ ok = true; document.getElementById('fb').style.display = 'none'; });
   setTimeout(function(){ if (!ok) document.getElementById('fb').style.display = 'block'; }, 15000);
